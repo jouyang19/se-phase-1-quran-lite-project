@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quran Lite</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <img class="quranimg" src="./assets/quran.png" alt="quran logo" />
+    <h1>The Clear Qur'an</h1>
+    <button id="toggle-chapters" name="toggle-chapters">
+      Chapter/Surah Selection
+    </button>
+    <select id="quranChapters" name="chapters" size="10" style="display: none">
+      <option value="alfatiha">1. Al-Fatiha</option>
+      <option value="albaqarah">2. Al-Baqarah</option>
+      <option value="aaliimran">3. Aali Imran</option>
+      <option value="annisa">4. An-Nisa'</option>
+      <option value="almaidah">5. Al-Ma'idah</option>
+      <option value="alanam">6. Al-An'am</option>
+      <option value="alaraf">7. Al-A'raf</option>
+      <option value="alanfal">8. Al-Anfal</option>
+      <option value="attaubah">9. At-Tawbah</option>
+      <option value="yunus">10. Yunus</option>
+      <option value="hud">11. Hud</option>
+      <option value="yusuf">12. Yusuf</option>
+      <option value="arrad">13. Ar-Ra'd</option>
+      <option value="ibrahim">14. Ibrahim</option>
+      <option value="alhijr">15. Al-Hijr</option>
+      <option value="annahl">16. An-Nahl</option>
+      <option value="alisra">17. Al-Isra</option>
+      <option value="alkahf">18. Al-Kahf</option>
+      <option value="maryam">19. Maryam</option>
+      <option value="taha">20. Ta-Ha</option>
+      <option value="alanbiya">21. Al-Anbiya</option>
+      <option value="alhajj">22. Al-Hajj</option>
+      <option value="almuminun">23. Al-Mu'minun</option>
+      <option value="annur">24. An-Nur</option>
+      <option value="alfurqan">25. Al-Furqan</option>
+      <option value="ashshuara">26. Ash-Shu'ara</option>
+      <option value="annaml">27. An-Naml</option>
+      <option value="alqasas">28. Al-Qasas</option>
+      <option value="alankabut">29. Al-Ankabut</option>
+      <option value="arrum">30. Ar-Rum</option>
+      <option value="luqman">31. Luqman</option>
+      <option value="assajdah">32. As-Sajdah</option>
+      <option value="alahzab">33. Al-Ahzab</option>
+      <option value="saba">34. Saba'</option>
+      <option value="fatir">35. Fatir</option>
+      <option value="yaasin">36. Ya-Sin</option>
+      <option value="assaffat">37. As-Saffat</option>
+      <option value="sad">38. Sad</option>
+      <option value="azzumar">39. Az-Zumar</option>
+      <option value="ghafir">40. Ghafir</option>
+      <option value="fussilat">41. Fussilat</option>
+      <option value="ashshura">42. Ash-Shura</option>
+      <option value="azzukhruf">43. Az-Zukhruf</option>
+      <option value="addukhan">44. Ad-Dukhan</option>
+      <option value="aljathiyah">45. Al-Jathiyah</option>
+      <option value="al ahqaf">46. Al-Ahqaf</option>
+      <option value="muhammad">47. Muhammad</option>
+      <option value="alfath">48. Al-Fath</option>
+      <option value="alhujurat">49. Al-Hujurat</option>
+      <option value="qaf">50. Qaf</option>
+      <option value="adhariyat">51. Adh-Dhariyat</option>
+      <option value="attur">52. At-Tur</option>
+      <option value="annajm">53. An-Najm</option>
+      <option value="alqamar">54. Al-Qamar</option>
+      <option value="arrahman">55. Ar-Rahman</option>
+      <option value="alwaqiah">56. Al-Waqi'ah</option>
+      <option value="alhadid">57. Al-Hadid</option>
+      <option value="almujadilah">58. Al-Mujadilah</option>
+      <option value="alhashr">59. Al-Hashr</option>
+      <option value="almumtahanah">60. Al-Mumtahanah</option>
+      <option value="assaff">61. As-Saff</option>
+      <option value="aljumuah">62. Al-Jumu'ah</option>
+      <option value="almunafiqoon">63. Al-Munafiqoon</option>
+      <option value="attaghabun">64. At-Taghabun</option>
+      <option value="attalaq">65. At-Talaq</option>
+      <option value="attahrim">66. At-Tahrim</option>
+      <option value="almulk">67. Al-Mulk</option>
+      <option value="alqalam">68. Al-Qalam</option>
+      <option value="alhaqqah">69. Al-Haqqah</option>
+      <option value="almaarij">70. Al-Ma'arij</option>
+      <option value="nuh">71. Nuh</option>
+      <option value="aljinn">72. Al-Jinn</option>
+      <option value="almuzzammil">73. Al-Muzzammil</option>
+      <option value="almuddathir">74. Al-Muddathir</option>
+      <option value="alqiyamah">75. Al-Qiyamah</option>
+      <option value="alinsan">76. Al-Insan</option>
+      <option value="almursalat">77. Al-Mursalat</option>
+      <option value="annaba">78. An-Naba</option>
+      <option value="annaziat">79. An-Nazi'at</option>
+      <option value="abasa">'Abasa</option>
+      <option value="attakwir">81. At-Takwir</option>
+      <option value="alinfitar">82. Al-Infitar</option>
+      <option value="almutaffifin">83. Al-Mutaffifin</option>
+      <option value="alinshiqaq">84. Al-Inshiqaq</option>
+      <option value="alburooj">85. Al-Burooj</option>
+      <option value="attariq">86. At-Tariq</option>
+      <option value="ala'la">87. Al-A'la</option>
+      <option value="alghashiyah">88. Al-Ghashiyah</option>
+      <option value="alfajr">89. Al-Fajr</option>
+      <option value="albalad">90. Al-Balad</option>
+      <option value="ashshams">91. Ash-Shams</option>
+      <option value="allayl">92. Al-Layl</option>
+      <option value="adduha">93. Ad-Duha</option>
+      <option value="alsharh">94. Ash-Sharh</option>
+      <option value="attin">95. At-Tin</option>
+      <option value="alalaq">96. Al-'Alaq</option>
+      <option value="alqadr">97. Al-Qadr</option>
+      <option value="albayyinah">98. Al-Bayyinah</option>
+      <option value="alzalzalah">99. Al-Zalzalah</option>
+      <option value="aladiyat">100. Al-'Adiyat</option>
+      <option value="alqariah">101. Al-Qari'ah</option>
+      <option value="attakathur">102. At-Takathur</option>
+      <option value="alasr">103. Al-'Asr</option>
+      <option value="alhumazah">104. Al-Humazah</option>
+      <option value="alfil">105. Al-Fil</option>
+      <option value="quraish">106. Quraish</option>
+      <option value="almaoon">107. Al-Ma'un</option>
+      <option value="alkawthar">108. Al-Kawthar</option>
+      <option value="alkafiroon">109. Al-Kafiroon</option>
+      <option value="annasr">110. An-Nasr</option>
+      <option value="almasad">111. Al-Masad</option>
+      <option value="alikhlas">112. Al-Ikhlas</option>
+      <option value="alfalaq">113. Al-Falaq</option>
+      <option value="annas">114. An-Nas</option>
+    </select>
+    <div id="verses"></div>
+  </body>
+</html>
